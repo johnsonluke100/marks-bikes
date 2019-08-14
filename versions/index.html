@@ -12,94 +12,75 @@ body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
 }
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
 .paragraph {
-  margin-bottom: 60px;
-  margin-right: 10%;
-  margin-left: 10%;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-5%, -10%);
+  background: lightgray;
+  padding: 10px 50px;
 }
 .title {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 32px;
+  font-size: 100%;
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  padding: 40px;
+  padding-right: 5%;
+  padding-left: 5%;
   background-color: #0093cc;
   color: white;
-}
-.header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
+  font-weight: bold;
 }
 
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
+.centered {
+  position: absolute;
+  top: 90px;
+  left: 16px;
 }
 </style>
 <body>
 
-<div class="title">
- <center>
-  <p>Mark's Bikes</p>
- </center>
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="index" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="projects" class="w3-button w3-block w3-black">PROJECTS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="years" class="w3-button w3-block w3-black">YEARS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="literature" class="w3-button w3-block w3-black">LITERATURE</a>
+    </div>
+  </div>
 </div>
 
-<div id="navbar">
-  <a class="active" href="index">Home</a>
-  <a href="projects">Projects</a>
-  <a href="literature">Literature</a>
-  <a href="database">Database</a>
+<div class="container">
+  <img src="imgs/image.jpg" style="width:100%;">
+  <div class="centered title">
+    <p>Mark's Bikes</p>
+  </div>
 </div>
-
-
 
 <div class="paragraph">
  <p>After doing a lot searching on the internet for information on vintage bikes, I noticed that there was some information out there but it was never as complete as I would like. My hope is to make this a great reference so if any one is looking for information on 1987- 1989 Schwinn Circuits this will be the place!</p>
-</div>
 
-<div class="paragraph">
  I love vintage lugged columbus steel bikes.  I stumbled across the "Tenax" Schwinn bikes and was amazed at the quality of the frames and components.  However, my web searches did not provide very good details about them.  So, I decided to pull together all the good information - including my own measurements and observations.  I hope you enjoy!
-</div>
 
-<div class="paragraph">
  <p>Marks-Bikes.com is always looking for data, ads and reviews to add to its online archive.  If you have something please contact me.</p>
 </div>
 
@@ -124,19 +105,6 @@ function openMenu(evt, menuName) {
 }
 document.getElementById("myLink").click();
 </script>
-<script>
-window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
 </body>
 </html>
